@@ -20,3 +20,4 @@ Thumbs.db
 .ipynb_checkpoints/
 tmp/
 temp/
+finetuned-financial-flan/

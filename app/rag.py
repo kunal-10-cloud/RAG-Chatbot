@@ -26,13 +26,18 @@ def is_context_relevant(context: str, question: str) -> bool:
 
 def build_prompt(context, question):
     return f"""
-You are a financial policy assistant.
+You are a professional financial advisor.
 
-Answer the question strictly using the context below.
-Use a complete sentence.
-Do not answer with a standalone number.
-If the answer is not present in the context, say:
-"{REFUSAL_MESSAGE}"
+Using ONLY the information provided in the context below,
+answer the user's question in a complete and explanatory manner.
+
+Guidelines:
+- Always respond in full sentences.
+- Clearly state the answer first.
+- Then briefly explain what the answer means, using the context.
+- Do not answer with just a number or a single word.
+- If the answer is not explicitly present in the context, respond exactly with:
+"I do not have enough information to answer this question."
 
 Context:
 {context}
